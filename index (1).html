@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Himanshu Thappa | MyDataVerse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+/* Same look as the Dimension (HTML5 UP) theme on the current site: #1b1f22 ground, white type,
+Source Sans Pro 300/600, wide letter-spacing, 1px white outlines. Corners are square. */
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:#1b1f22;color:#fff;font:300 1rem/1.65 "Source Sans Pro",system-ui,sans-serif;letter-spacing:.2rem;min-height:100vh}
+a{color:#fff;text-decoration:none;border-bottom:dotted 1px rgba(255,255,255,.5)}a:hover{border-bottom-color:transparent}
+p{margin:0 0 1.6rem}
+h1,h2,h3{color:#fff;font-weight:600;line-height:1.5;margin:0 0 1rem;text-transform:uppercase;letter-spacing:.2rem}
+h1{font-size:2.25rem;letter-spacing:.5rem}h2{font-size:1.25rem}h3{font-size:.9rem;margin-top:2.25rem}
+h2.major{border-bottom:solid 1px #fff;width:max-content;max-width:100%;padding-bottom:.5rem;margin-bottom:2rem}
+:focus-visible{outline:2px solid #fff;outline-offset:3px}
+#wrapper{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem 1rem}
+#header{text-align:center;max-width:100%}
+.logo{width:5.5rem;height:5.5rem;border:solid 1px #fff;border-radius:100%;margin:0 auto 2rem;display:flex;align-items:center;justify-content:center}
+.logo svg{width:2rem;height:2rem}
+.content{border:solid 1px #fff;border-width:1px 0;width:min(100%,26rem);margin:0 auto;transition:width .9s cubic-bezier(.2,.7,.2,1)}body.go .content{width:min(100%,60rem)}
+.content .inner{padding:2.25rem 1.5rem 1.25rem}.content h1{margin:0}.logo,.inner{animation:in .8s ease}
+.reveal{display:grid;grid-template-rows:0fr;transition:grid-template-rows .9s cubic-bezier(.2,.7,.2,1)}body.go .reveal{grid-template-rows:1fr}
+.reveal>div{overflow:hidden;min-height:0}
+.reveal p{max-width:36rem;margin:0 auto 1.5rem;padding:0 1.5rem;opacity:0;transition:opacity .6s .5s}body.go .reveal p{opacity:1}
+.tiles ul{list-style:none;margin:0;padding:0 1.5rem 2rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.tiles li{opacity:0;transform:translateY(-14px);transition:opacity .5s,transform .5s}body.go .tiles li{opacity:1;transform:none}
+.tiles li:nth-child(1){transition-delay:.55s}.tiles li:nth-child(2){transition-delay:.7s}.tiles li:nth-child(3){transition-delay:.85s}.tiles li:nth-child(4){transition-delay:1s}
+.tiles a{display:block;height:100%;border:solid 1px #fff;padding:1.25rem 1rem;text-align:left}
+.tiles a:hover{background:rgba(255,255,255,.075)}.tiles a:active{background:rgba(255,255,255,.175)}
+.tiles strong{display:block;font:600 .85rem "Source Sans Pro",sans-serif;text-transform:uppercase;letter-spacing:.2rem;margin-bottom:.4rem}
+.tiles span{display:block;font-size:.85rem;line-height:1.4;letter-spacing:.05rem;color:rgba(255,255,255,.7)}
+@media (max-width:980px){.tiles ul{grid-template-columns:1fr 1fr}}
+#main{width:100%;display:flex;justify-content:center}
+#art{position:relative;width:42rem;max-width:100%;padding:4.5rem 2.5rem 2rem;background:rgba(255,255,255,.04);border:solid 1px rgba(255,255,255,.175);animation:in .325s ease}
+@keyframes in{from{opacity:0}to{opacity:1}}
+.close{position:absolute;top:0;right:0;width:4rem;height:4rem;background:none;border:0;cursor:pointer;color:#fff}
+.close:hover{background:rgba(255,255,255,.075)}.close svg{width:1.4rem;height:1.4rem}
+.btn,.chip{display:inline-block;background:none;color:#fff;border:solid 1px #fff;cursor:pointer;text-transform:uppercase;font:600 .8rem/2.75rem "Source Sans Pro",sans-serif;letter-spacing:.2rem;padding:0 1.5rem;height:2.75rem;white-space:nowrap}
+.btn:hover,.chip:hover{background:rgba(255,255,255,.075)}
+.btn.primary,.chip[aria-pressed=true]{background:#fff;color:#1b1f22}
+.chip{height:2.25rem;line-height:2.25rem;padding:0 1rem;font-size:.7rem;border-color:rgba(255,255,255,.5)}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;margin:0 0 1.5rem;padding:0}
+.tags li{border:solid 1px rgba(255,255,255,.5);padding:0 .9rem;font:600 .7rem/2.1rem "Source Sans Pro",sans-serif;text-transform:uppercase}
+.row{display:block;padding:1.5rem 0;border:0;border-bottom:solid 1px rgba(255,255,255,.175)}
+.row:hover{background:rgba(255,255,255,.04)}.row h3{margin:0 0 .3rem}.row p{margin:0 0 .5rem}
+.meta{color:rgba(255,255,255,.5);font-size:.85rem}
+.bar{display:flex;gap:.75rem;flex-wrap:wrap;margin:2rem 0 1rem}
+label{display:block;font:600 .75rem "Source Sans Pro",sans-serif;text-transform:uppercase;letter-spacing:.2rem;margin:1.25rem 0 .5rem}
+input,select,textarea{width:100%;background:transparent;color:#fff;border:solid 1px rgba(255,255,255,.175);border-radius:0;padding:0 .9rem;height:2.75rem;font:inherit;letter-spacing:.1rem}
+textarea{height:9rem;padding:.7rem .9rem;resize:vertical}
+select option{background:#1b1f22}
+input:focus,select:focus,textarea:focus{border-color:#fff;outline:none}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:0 1.5rem}
+.box{border:solid 1px #fff;padding:1.25rem 1.5rem;margin-top:1.5rem}
+.box h3{margin-top:0}
+.status{margin-top:1.25rem;font-weight:600;font-size:.9rem;letter-spacing:.1rem}
+.article p{line-height:1.8}
+@media (max-width:736px){h1{font-size:1.6rem;letter-spacing:.3rem}.tiles ul{grid-template-columns:1fr}#art{padding:4rem 1.25rem 1.5rem}.fields{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){#art{animation:none}.logo,.inner{animation:none}.content,.reveal,.reveal p,.tiles li{transition:none!important}}
+</style>
+</head>
+<body>
+<div id="wrapper">
+<header id="header">
+<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" aria-hidden="true"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20M9 3l3 6 3-6M12 21 8 9m4 12 4-12"/></svg></div>
+<div class="content"><div class="inner"><h1>Himanshu Thappa</h1></div>
+<div class="reveal"><div><p id="tag"></p><nav class="tiles" aria-label="Main"><ul id="navlist"></ul></nav></div></div></div>
+</header>
+<main id="main"><article id="art" tabindex="-1" hidden></article></main>
+</div>
+<script>
+/* ============================================================
+EDIT HERE. Everything on the site comes from this SITE object.
+- Add a project: copy one block in "projects".
+- Add a blog post: copy one block in "posts" (newest first).
+- Contact form: paste your Formspree URL into formEndpoint.
+============================================================ */
+const SITE = {
+name: "Himanshu Thappa",
+email: "himanshu990@gmail.com", // questions from the form are sent to this address
+formEndpoint: "", // optional: your own Formspree URL. Leave empty to use your email above
+github: "https://github.com/himanshuthappa990",
+linkedin: "", // paste your LinkedIn URL to show it
+tagline: "Data architecture, governance and quality for teams building data as a product.",
+intro: "I help customers, teams and individuals choose the right solutions, products and frameworks to build data as a product, a data warehouse or a lakehouse. I have spent 18+ years in IT across multiple domains, geographies and cultures, delivering scalable, reusable solutions in data engineering, architecture, governance and quality.",
+doing: [
+"Choosing between a data product, warehouse or lakehouse approach and explaining why.",
+"Designing data governance frameworks that connect to the platform teams already use.",
+"Quality assurance for complex, highly integrated data platforms."
+],
+beyond: "Away from work I solve puzzles and invent stories with my daughter, look for parks and trips to other cities, and explore coffee and music, from Indian ghazals to progressive and electronic.",
+toolbox: ["Data architecture","Data governance","Data quality","Business intelligence","Azure","Databricks","Delta lakehouse","Collibra"],
+industries: ["Public safety","Energy","Paper and packaging"],
+projects: [
+{ id:"vitja", name:"Project Vitja", client:"Finnish Police (Poliisi)", industry:"Public safety",
+summary:"A business intelligence and analytics solution for the Finnish Police.",
+context:"A business intelligence and analytics solution built for the Finnish Police.",
+did:[], stack:[], outcome:"" },
+{ id:"fortum", name:"Modern data platform", client:"Fortum Oy", industry:"Energy",
+summary:"Quality assurance for a complex, widely integrated data platform on Azure and Databricks.",
+context:"A modern data platform for an energy company, built on the Azure cloud with a Databricks Delta lakehouse and integrated with many systems.",
+did:["Delivered quality assurance for the platform across its integrations."],
+stack:["Azure","Databricks","Delta lakehouse"], outcome:"" },
+{ id:"storaenso", name:"Data governance framework", client:"Stora Enso Oyj", industry:"Paper and packaging",
+summary:"A data governance framework built on Collibra and integrated with the Azure data platform.",
+context:"A governance framework for a paper and packaging company, tied into its Azure data platform.",
+did:["Designed the data governance framework.","Implemented it with Collibra, integrated with the Azure data platform."],
+stack:["Collibra","Azure"], outcome:"" }
+],
+prompts: [
+"Should we build a warehouse or a lakehouse?",
+"How do we start a data governance programme?",
+"Can you review our data platform approach?",
+"I would like to talk about a consulting engagement."
+],
+topics: ["Data architecture","Data governance","Data quality","Consulting enquiry","Career and mentoring","Something else"],
+posts: [
+{ id:"data-as-a-product", title:"Data as a product: where I start", date:"2026-10-20", tags:["Architecture","Data products"], sample:true,
+excerpt:"Treating data as a product starts with naming an owner and a customer, not with choosing a tool.",
+body:["Before any platform decision, I ask two questions: who owns this data, and who uses it? If either answer is vague, no technology will fix it.","A data product has a clear owner, a defined consumer, documented quality expectations and a way to report when it breaks. Those four things matter more than the stack underneath.","Start with one dataset that people already complain about. Make it a product, learn what that takes in your organisation, then repeat."] },
+{ id:"warehouse-or-lakehouse", title:"Warehouse or lakehouse? Three questions I ask first", date:"2026-10-12", tags:["Architecture","Lakehouse"], sample:true,
+excerpt:"The answer depends less on technology fashion and more on your data, your people and your reporting needs.",
+body:["What kinds of data do you have? Mostly structured data with stable reporting needs favours a warehouse. A mix of structured, semi-structured and machine learning workloads favours a lakehouse.","Who will run it? A platform is only as good as the team that can operate it day to day.","How will you govern it? Whichever you choose, decide early how quality, ownership and access are managed. It is far harder to add later."] },
+{ id:"governance-people-follow", title:"Governance people actually follow", date:"2026-10-05", tags:["Governance","Data quality"], sample:true,
+excerpt:"Governance works when it sits inside the tools teams already use, not in a document nobody opens.",
+body:["Policies on a shared drive are rarely read. Rules built into the catalogue, the pipelines and the approval flow get followed because they are part of the work.","Keep the first version small: a few clear roles, a glossary people can search, and quality checks on the data that matters most.","Then measure use, not documents. If teams are finding and trusting data faster, the framework is working."] }
+]
+};
+/* ============================================================ */
+const TABS=[{id:"profile",label:"Profile",desc:"Who I am and what I do"},{id:"experience",label:"Experience",desc:"Projects by industry"},{id:"journal",label:"Journal",desc:"Notes and writing"},{id:"ask",label:"Ask me",desc:"Send me a question"}];
+const $=s=>document.querySelector(s), art=$("#art"), header=$("#header");
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fmt=d=>new Date(d).toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"});
+const mins=p=>Math.max(1,Math.round(p.body.join(" ").split(/\s+/).length/200));
+const tags=a=>`<ul class="tags">${a.map(t=>`<li>${esc(t)}</li>`).join("")}</ul>`;
+let prefill="",filterInd="All",q="",tag="All";
+const store={get(k){try{return JSON.parse(localStorage.getItem(k))||{}}catch(e){return{}}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+$("#navlist").innerHTML=TABS.map(t=>`<li><a href="#${t.id}"><strong>${t.label}</strong><span>${t.desc}</span></a></li>`).join("");
+$("#tag").textContent=SITE.tagline;
+function profile(){
+const latest=SITE.posts.slice(0,2).map(p=>`<a class="row" href="#journal-${p.id}"><h3>${esc(p.title)}</h3><p class="meta">${fmt(p.date)}</p><p>${esc(p.excerpt)}</p></a>`).join("");
+return `<h2 class="major">Profile</h2><h3 style="margin-top:0">About me</h3><p>${esc(SITE.intro)}</p>
+<h3>Ask me a question</h3>${askForm()}
+<h3>What I do</h3>${SITE.doing.map(d=>`<p>${esc(d)}</p>`).join("")}
+<h3>Beyond work</h3><p>${esc(SITE.beyond)}</p>
+<h3>Toolbox</h3>${tags(SITE.toolbox)}
+<h3>Latest from the journal</h3>${latest}`;
+}
+function experience(id){
+const p=SITE.projects.find(x=>x.id===id);
+if(p){
+const sec=(t,b)=>`<h3>${t}</h3>${b}`;
+return `<p><a href="#experience">Back to experience</a></p><h2 class="major">${esc(p.name)}</h2>
+<p class="meta">${esc(p.client)} · ${esc(p.industry)}</p>${sec("Context",`<p>${esc(p.context)}</p>`)}
+${sec("What I did",p.did.length?`<ul>${p.did.map(d=>`<li>${esc(d)}</li>`).join("")}</ul>`:`<p class="meta">More detail coming soon.</p>`)}
+${p.stack.length?sec("Technology",tags(p.stack)):""}${p.outcome?sec("Outcome",`<p>${esc(p.outcome)}</p>`):""}
+<div class="bar"><button class="btn primary" data-ask="I would like to know more about your work on ${esc(p.name)}.">Ask me about this project</button></div>`;
+}
+const rows=SITE.projects.filter(x=>filterInd==="All"||x.industry===filterInd).map(x=>`<a class="row" href="#experience-${x.id}"><h3>${esc(x.name)}</h3><p class="meta">${esc(x.client)} · ${esc(x.industry)}</p><p>${esc(x.summary)}</p></a>`).join("");
+return `<h2 class="major">Experience</h2><p>Projects across industries. Open one for the details.</p>
+<ul class="tags" aria-label="Filter by industry">${["All",...SITE.industries].map(i=>`<li style="border:0;padding:0"><button class="chip" data-ind="${esc(i)}" aria-pressed="${i===filterInd}">${esc(i)}</button></li>`).join("")}</ul>${rows}`;
+}
+function journal(id){
+const p=SITE.posts.find(x=>x.id===id);
+if(p){
+const liked=store.get("likes")[p.id], i=SITE.posts.indexOf(p), nx=SITE.posts[i+1]||SITE.posts[0];
+return `<p><a href="#journal">Back to journal</a></p><div class="article"><h2 class="major">${esc(p.title)}</h2>
+<p class="meta">${fmt(p.date)} · ${mins(p)} min read</p>${tags(p.tags)}${p.body.map(b=>`<p>${esc(b)}</p>`).join("")}</div>
+<div class="bar"><button class="btn" id="like" aria-pressed="${!!liked}">${liked?"Marked helpful":"This was helpful"}</button>
+<button class="btn" id="copy">Copy link</button><button class="btn primary" data-ask="About your post “${esc(p.title)}”: ">Ask a question</button></div>
+${nx!==p?`<p class="meta">Next: <a href="#journal-${nx.id}">${esc(nx.title)}</a></p>`:""}`;
+}
+const all=["All",...new Set(SITE.posts.flatMap(x=>x.tags))];
+return `<h2 class="major">Journal</h2><p>Notes on data, architecture and whatever else I am learning.</p>
+<label for="s">Search posts</label><input id="s" type="search" placeholder="Try “governance”" value="${esc(q)}">
+<ul class="tags" style="margin-top:1rem" aria-label="Filter by topic">${all.map(t=>`<li style="border:0;padding:0"><button class="chip" data-tag="${esc(t)}" aria-pressed="${t===tag}">${esc(t)}</button></li>`).join("")}</ul>
+<p class="meta" id="count" aria-live="polite"></p><div id="posts"></div>`;
+}
+function drawPosts(){
+const l=$("#posts"); if(!l) return;
+const r=SITE.posts.filter(p=>(tag==="All"||p.tags.includes(tag))&&(p.title+p.excerpt+p.tags.join(" ")+p.body.join(" ")).toLowerCase().includes(q.toLowerCase()));
+$("#count").textContent=r.length?r.length+" post"+(r.length>1?"s":""):"No posts match. Try another word or clear the topic filter.";
+l.innerHTML=r.map(p=>`<a class="row" href="#journal-${p.id}"><h3>${esc(p.title)}</h3><p class="meta">${fmt(p.date)} · ${mins(p)} min read · ${esc(p.tags.join(", "))}</p><p>${esc(p.excerpt)}</p></a>`).join("");
+}
+function askForm(){
+return `<p class="meta">Pick a common question, write your own, or use the sample button to test the form.</p>
+<ul class="tags">${SITE.prompts.map(t=>`<li style="border:0;padding:0"><button class="chip" data-prompt="${esc(t)}">${esc(t)}</button></li>`).join("")}</ul>
+<form id="f" novalidate><div class="fields"><div><label for="n">Name</label><input id="n" name="name" autocomplete="name"></div>
+<div><label for="e">Email</label><input id="e" name="email" type="email" autocomplete="email"></div></div>
+<label for="t">Topic</label><select id="t" name="topic">${SITE.topics.map(t=>`<option>${esc(t)}</option>`).join("")}</select>
+<label for="m">Your question</label><textarea id="m" name="message"></textarea>
+<div class="bar"><button class="btn primary" type="submit">Send question</button><button class="btn" type="button" id="demo">Fill in a sample question</button></div>
+<p class="status" id="st" role="status"></p></form><div id="pv"></div>`;
+}
+function ask(){
+return `<h2 class="major">Ask me</h2><p>Have a question about data architecture, governance or a project of yours? Send it here and I will reply by email.</p>${askForm()}
+<p class="meta">Prefer to write directly? <a href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a> · <a href="${esc(SITE.github)}">GitHub</a>${SITE.linkedin?` · <a href="${esc(SITE.linkedin)}">LinkedIn</a>`:""}</p>`;
+}
+function bindAsk(){
+const f=$("#f"); if(!f) return;
+if(prefill){$("#m").value=prefill;prefill="";}
+$("#demo").onclick=()=>{$("#n").value="Test Visitor";$("#e").value="test@example.com";$("#t").value=SITE.topics[0];$("#m").value=SITE.prompts[0];$("#st").textContent="Sample filled in. Replace the sample email with one you own to test replies, then click Send question.";};
+art.querySelectorAll("[data-prompt]").forEach(b=>b.onclick=()=>{$("#m").value=b.dataset.prompt;$("#m").focus();});
+f.onsubmit=async ev=>{
+ev.preventDefault(); const st=$("#st"), d=Object.fromEntries(new FormData(f));
+if(!d.name.trim()||!/\S+@\S+\.\S+/.test(d.email)||!d.message.trim()){st.textContent="Please add your name, a valid email and your question.";return;}
+const real=/\S+@\S+\.\S+/.test(SITE.email)&&!/example\.com$/i.test(SITE.email);
+const url=SITE.formEndpoint||(real?"https://formsubmit.co/ajax/"+encodeURIComponent(SITE.email):"");
+if(url){
+st.textContent="Sending…";
+try{const r=await fetch(url,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify({...d,_replyto:d.email,_subject:"["+d.topic+"] Question from "+d.name,_template:"table",_honey:""})});
+if(!r.ok)throw 0; st.textContent="Thank you. Your question was sent and I will reply by email."; f.reset(); $("#pv").innerHTML="";}
+catch(e){st.textContent="Your question could not be sent. Please email me directly at "+SITE.email+".";}
+}else{
+const mail="mailto:"+SITE.email+"?subject="+encodeURIComponent("["+d.topic+"] Question from "+d.name)+"&body="+encodeURIComponent(d.message+"\n\nFrom: "+d.name+" ("+d.email+")");
+$("#pv").innerHTML=`<div class="box"><h3>Test mode: nothing was sent</h3><p><b>Topic:</b> ${esc(d.topic)}<br><b>From:</b> ${esc(d.name)} (${esc(d.email)})<br><b>Question:</b> ${esc(d.message)}</p><a class="btn primary" href="${esc(mail)}">Open in my email app</a></div>`;
+st.textContent="The form works. This is a preview because your email address is not set yet.";
+}
+};
+}
+function route(){
+const h=location.hash.slice(1), k=h.indexOf("-"), tab=k<0?h:h.slice(0,k), id=k<0?"":h.slice(k+1);
+const t=TABS.find(x=>x.id===tab);
+if(t)document.body.classList.add("go");
+header.hidden=!!t; art.hidden=!t;
+if(!t){document.title="Himanshu Thappa | MyDataVerse";return;}
+art.innerHTML=`<button class="close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M4 4l16 16M20 4 4 20"/></svg></button>`+{profile,experience,journal,ask}[t.id](id);
+const h2=art.querySelector("h2"); document.title=(h2?h2.textContent+" | ":"")+SITE.name;
+window.scrollTo(0,0); art.focus({preventScroll:true});
+art.querySelector(".close").onclick=()=>{location.hash="";};
+drawPosts(); bindAsk();
+const s=$("#s"); if(s) s.oninput=()=>{q=s.value;drawPosts();};
+art.querySelectorAll("[data-ind]").forEach(b=>b.onclick=()=>{filterInd=b.dataset.ind;route();});
+art.querySelectorAll("[data-tag]").forEach(b=>b.onclick=()=>{tag=b.dataset.tag;route();});
+art.querySelectorAll("[data-ask]").forEach(b=>b.onclick=()=>{prefill=b.dataset.ask;location.hash="#ask";});
+const lk=$("#like"); if(lk) lk.onclick=()=>{const L=store.get("likes");L[id]=!L[id];store.set("likes",L);route();};
+const cp=$("#copy"); if(cp) cp.onclick=async()=>{try{await navigator.clipboard.writeText(location.href);cp.textContent="Link copied";}catch(e){cp.textContent="Copy failed";}};
+}
+addEventListener("hashchange",route);
+addEventListener("keydown",e=>{if(e.key==="Escape"&&!art.hidden)location.hash="";});
+route();
+if(!location.hash&&!matchMedia("(prefers-reduced-motion:reduce)").matches)setTimeout(()=>document.body.classList.add("go"),700);else document.body.classList.add("go");
+</script>
+</body>
+</html>
